@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: CloudFormation template for IAM user
+Resources:
+  IAM:
+    Type: AWS::IAM::User
+    Properties:
+      Groups:
+        - jjtech_glorious_batch
+      LoginProfile: 
+        Password: String123$#!
+        PasswordResetRequired: true
+      UserName: Test-Iam-user
+      ManagedPolicyArns: 
+        - 'arn:aws:iam::aws:policy/AmazonS3FullAccess'

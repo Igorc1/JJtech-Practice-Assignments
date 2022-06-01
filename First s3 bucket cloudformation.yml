@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: CloudFormation template for s3 bucket     
+Resources:
+  S3Bucket:
+    Type: AWS::S3::Bucket
+    Properties: 
+      BucketName: igor-bucket123432
+      VersioningConfiguration: 
+        Status: Enabled
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
